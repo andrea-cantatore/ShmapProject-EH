@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] private float _movementSpeed;
+    
     void Update()
     {
-        
+        transform.Translate(Vector2.right * (_movementSpeed * Time.deltaTime));
+        if (gameObject.activeSelf)
+        {
+            StartCoroutine(WaitToDeactivate());
+        } 
+    }
+    private IEnumerator WaitToDeactivate()
+    {
+        yield return new WaitForSeconds(1.4f);
+        gameObject.SetActive(false);
     }
 }
