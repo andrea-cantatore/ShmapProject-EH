@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("lower - higher movement speed")]private Vector2 _speedRange;
     private Vector2 _movementDirections;
     private float _movementSpeed; //setted in awake
+    [SerializeField] private Vector2 mapLimitX, mapLimitY;
     
     [Header("ShootAndBoombs")]
     [SerializeField] private float _shootDelay;
@@ -149,8 +150,24 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        Vector2 movement = _movementDirections.normalized * (_movementSpeed * Time.fixedDeltaTime);
-        _rb.MovePosition(_rb.position + movement);
+        if (IsPlayerAbleToMove())
+        {
+            Vector2 movement = _movementDirections.normalized * (_movementSpeed * Time.fixedDeltaTime);
+            _rb.MovePosition(_rb.position + movement);
+        }
+    }
+    private bool IsPlayerAbleToMove()
+    {
+        if (
+            (mapLimitX.x >= transform.position.x && _movementDirections.x < 0) ||
+            (mapLimitX.y <= transform.position.x && _movementDirections.x > 0) ||
+            (mapLimitY.x >= transform.position.y && _movementDirections.y < 0) ||
+            (mapLimitY.y <= transform.position.y && _movementDirections.y > 0)
+        )
+        {
+            return false;
+        }
+        return true;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

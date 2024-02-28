@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="847328d3-f1ee-451d-ba43-f91a350601e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/ShootPowerUp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/ShootPowerUp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/ParallaxController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/ParallaxController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/BulletScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
     </list>
@@ -22,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/ParallaxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -108,6 +111,7 @@
       <workItem from="1708182291567" duration="2663000" />
       <workItem from="1709112098092" duration="1897000" />
       <workItem from="1709114076184" duration="4081000" />
+      <workItem from="1709129630653" duration="6615000" />
     </task>
     <servers />
   </component>

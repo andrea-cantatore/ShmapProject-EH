@@ -11,9 +11,9 @@ public class ParallaxController : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.down * (_movementSpeed * Time.deltaTime));
-        if (transform.position.x < _camera.position.x - 200)
-            transform.position = new Vector3(transform.position.x + 500, transform.position.y, transform.position.z);
+        transform.Translate(Vector2.left * (_movementSpeed * Time.deltaTime));
+        if (transform.position.x < _camera.position.x - 80)
+            transform.position = new Vector3(transform.position.x + 230, transform.position.y, transform.position.z);
         if (isBossFight && _movementSpeed > 0f)
             _movementSpeed -= slowingForBoss * Time.deltaTime;
     }

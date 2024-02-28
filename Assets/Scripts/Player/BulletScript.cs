@@ -7,7 +7,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed;
-    private CustomTimer _timer = new CustomTimer(1.5f);
+    private CustomTimer _timer = new CustomTimer(2.5f);
     private void OnEnable()
     {
         _timer.Start(DisableBullet);
