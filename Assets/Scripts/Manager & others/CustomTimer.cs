@@ -1,46 +1,51 @@
+using System;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
+[System.Serializable]
 public class CustomTimer
 {
-    private float duration; // Durata del timer
-    private float elapsedTime; // Tempo trascorso
+    public Action OnCompleated;
+    private float _duration;
+    private float _elapsedTime;
 
-    private bool isRunning; // Indica se il timer è in esecuzione
+    private bool _isRunning;
 
     public CustomTimer(float duration)
     {
-        this.duration = duration;
-        this.elapsedTime = 0f;
-        this.isRunning = false;
+        this._duration = duration;
+        this._elapsedTime = 0f;
+        this._isRunning = false;
     }
     
-    public void Start()
+    public void Start(Action onCompleated = null)
     {
-        isRunning = true;
+        OnCompleated = onCompleated;
+        _isRunning = true;
     }
     
-    public bool IsTimerRunning()
+    public bool TimerUpdate()
     {
-        if (!isRunning)
+        if (!_isRunning)
         {
             return false;
         }
 
-        elapsedTime += Time.deltaTime;
+        _elapsedTime += Time.deltaTime;
 
-        if (elapsedTime >= duration)
+        if (_elapsedTime >= _duration)
         {
-            elapsedTime = 0f;
-            isRunning = false;
-            return true;
+            OnCompleated?.Invoke();
+            _elapsedTime = 0f;
+            _isRunning = false;
+            return false;
         }
-
-        return false;
+        return true;
     }
     
     public void Reset()
     {
-        elapsedTime = 0f;
-        isRunning = false;
+        _elapsedTime = 0f;
+        _isRunning = false;
     }
 }

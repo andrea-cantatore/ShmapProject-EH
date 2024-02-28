@@ -1,27 +1,33 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     //general variables
+    
     private Rigidbody2D _rb => GetComponent<Rigidbody2D>();
+    [Header("Generals")]
     [SerializeField] private GameObject _hitbox;
     [SerializeField] private int _playerHP;
     private CustomTimer _timer;
     
     
-    //checks
+    
+    
+    [Header("Checks")]
     private bool _isPlayerAlive = true, _isAbleToShoot = true;
     
-    //movement variables
+  
+    [Header("Movement")]
     [SerializeField, Tooltip("lower - higher movement speed")]private Vector2 _speedRange;
     private Vector2 _movementDirections;
     private float _movementSpeed; //setted in awake
     
-    //shoot && bombs variables
+    [Header("ShootAndBoombs")]
     [SerializeField] private float _shootDelay;
     private float _fireElapseTime;
     private Transform _shootPoint1, _shootPoint2, _shootPoint3, _shootPoint4, _shootPoint5;
@@ -65,12 +71,13 @@ public class PlayerController : MonoBehaviour
                 _hitbox.SetActive(false);
                 _movementSpeed = _speedRange.y;
             }
-            if (Input.GetKey(KeyCode.K) && _timer.IsTimerRunning())
+            if (Input.GetKey(KeyCode.K) && !_timer.TimerUpdate())
             {
                 Shoot();
                 _timer.Reset();
                 _timer.Start();
             }
+            
         }
     }
     private void Shoot()

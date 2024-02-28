@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="847328d3-f1ee-451d-ba43-f91a350601e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/ShootPowerUp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/ShootPowerUp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/BulletScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
     </list>
@@ -20,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/ParallaxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -102,6 +105,9 @@
       <updated>1707170442251</updated>
       <workItem from="1707170446033" duration="2289000" />
       <workItem from="1708027403430" duration="9529000" />
+      <workItem from="1708182291567" duration="2663000" />
+      <workItem from="1709112098092" duration="1897000" />
+      <workItem from="1709114076184" duration="4081000" />
     </task>
     <servers />
   </component>
