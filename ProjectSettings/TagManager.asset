@@ -17,6 +17,7 @@ TagManager:
   - HpPowerUp
   - AbilityPowerUp
   - Player
+  - AllyBullet
   - 
   - 
   - 
@@ -24,8 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Enemy
   - 
   - 
   - 

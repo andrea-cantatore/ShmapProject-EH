@@ -171,10 +171,17 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == 8 && _powerUpLevel < 5)
+        if (other.gameObject.layer == 8)
         {
-            _powerUpLevel++;
-            other.gameObject.SetActive(false);
+            if(_powerUpLevel < 5)
+            {
+                _powerUpLevel++;
+                other.gameObject.SetActive(false); 
+            }
+        }
+        else
+        {
+            _playerHP--;
         }
     }
 

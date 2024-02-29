@@ -7,14 +7,18 @@ public class ParallaxController : MonoBehaviour
 {
     [SerializeField] private Transform _camera;
     [SerializeField] private float _movementSpeed, slowingForBoss;
-    [SerializeField]private bool isBossFight;
-
+    [SerializeField] private bool isBossFight;
+    private float _realTimeMovementSpeed;
+    private void Start()
+    {
+        _realTimeMovementSpeed = _movementSpeed;
+    }
     private void Update()
     {
-        transform.Translate(Vector2.left * (_movementSpeed * Time.deltaTime));
+        transform.Translate(Vector2.left * (_realTimeMovementSpeed * Time.deltaTime));
         if (transform.position.x < _camera.position.x - 80)
             transform.position = new Vector3(transform.position.x + 230, transform.position.y, transform.position.z);
-        if (isBossFight && _movementSpeed > 0f)
-            _movementSpeed -= slowingForBoss * Time.deltaTime;
+        if (isBossFight && _realTimeMovementSpeed > _movementSpeed - 1.5f)
+            _realTimeMovementSpeed -= slowingForBoss * Time.deltaTime;
     }
 }
