@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class GingerFighter : MonoBehaviour
+public class ScorpionEnemy : MonoBehaviour
 {
     [SerializeField] private float _hp;
     [SerializeField] private float _movementSpeed;
@@ -14,15 +15,16 @@ public class GingerFighter : MonoBehaviour
     [SerializeField] float _fireDelay;
     private float _fireElapsedTime;
     private float m_timer;
+    private int _bulletToShoot = 3;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private GameObject _bulletPrefab;
-    private PlayerController playerController;
     
-    private void Awake()
+    
+    private void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
         _targetPos = TargPosSetter(false);
     }
+    
     void Update()
     {
         m_timer += Time.deltaTime;
@@ -43,10 +45,15 @@ public class GingerFighter : MonoBehaviour
                 _fireElapsedTime = 0;
             }
         }
-        
-        
-        Vector2 direction = playerController.transform.position - transform.position;
-        transform.up = direction;
+        if (transform.position != _targetPos)
+        {
+            Vector2 direction = _targetPos - transform.position;
+            transform.up = direction;
+        }
+        else
+        {
+            transform.up = Vector2.left;
+        }
         
         if (_hp <= 0)
         {
@@ -81,17 +88,29 @@ public class GingerFighter : MonoBehaviour
         return new Vector3(newX, newY, 0);
 
     }
-
     private void Shoot()
     {
-        GameObject bullet = Instantiate(_bulletPrefab, _shootPoint.position,_shootPoint.rotation);
-        StartCoroutine(BulletDestroyer(bullet));
+        GameObject[] bullet = new GameObject[_bulletToShoot];
+        for (int i = 0; i < bullet.Length; i++)
+        {
+            float angle;
+            Quaternion rotation;
+            if (i != 0)
+            {
+                angle = (i % 2 == 0) ? 45f : -45f;
+                rotation = Quaternion.Euler(0f, 0f, angle);
+            }
+            else
+            {
+                angle = 0;
+                rotation = Quaternion.Euler(0f, 0f, angle);
+            }
+            bullet[i] = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation * rotation);
+        }
         
     }
-    private IEnumerator BulletDestroyer(GameObject bullet)
-    {
-        yield return new WaitForSeconds(2f);
-        Destroy(bullet);
-    }
     
+    
+    
+
 }
