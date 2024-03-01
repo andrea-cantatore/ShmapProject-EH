@@ -13,11 +13,9 @@ public class TurretAimed : MonoBehaviour
     [SerializeField] private float _maxX;
     [SerializeField] private float _fireDelay;
     private float _fireElapsedTime;
-    private float m_timer;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private GameObject _bulletPrefab;
     private PlayerController playerController;
-    private float ciao;
     
     private void Awake()
     {
