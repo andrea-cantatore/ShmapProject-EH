@@ -17,6 +17,7 @@ public class TurretAimed : MonoBehaviour
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private GameObject _bulletPrefab;
     private PlayerController playerController;
+    private float ciao;
     
     private void Awake()
     {
