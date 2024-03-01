@@ -11,7 +11,7 @@ public class TurretAimed : MonoBehaviour
     [SerializeField] private float _movementSpeed;
     private Vector3 _targetPos;
     [SerializeField] private float _maxX;
-    [SerializeField] float _fireDelay;
+    [SerializeField] private float _fireDelay;
     private float _fireElapsedTime;
     private float m_timer;
     [SerializeField] private Transform _shootPoint;
@@ -62,7 +62,7 @@ public class TurretAimed : MonoBehaviour
     }
     private Vector3 TargPosSetter()
     {
-        float newX = maxX + 3;
+        float newX = _maxX + 3;
         return new Vector3(newX, transform.position.y, 0);
 
     }
