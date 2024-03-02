@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129665301355657591}
   - component: {fileID: 1835735879154965547}
+  - component: {fileID: 2562859883070089489}
   m_Layer: 9
   m_Name: HpPowerUp
   m_TagString: Untagged
@@ -68,6 +69,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.27313963
+--- !u!114 &2562859883070089489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911163563030698193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a7bf451f49604ca3f6602a9fc4ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxX: 18
+  _movementSpeed: 4
 --- !u!1 &7961133444428353150
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +155,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: c5833a18f85a8cd4f946a0cb777e2420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

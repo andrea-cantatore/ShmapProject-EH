@@ -18,6 +18,7 @@ public class GingerFighter : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     private PlayerController playerController;
     [SerializeField] private int _scoreValue;
+    [SerializeField] private GameObject[] powerUpPrefab;
     
     private void OnEnable()
     {
@@ -99,6 +100,12 @@ public class GingerFighter : MonoBehaviour
     }
     private void DestroyMe()
     {
+        if (Random.Range(0f, 1f) <= 0.2f)
+        {
+            int randomIndex = Random.Range(0, powerUpPrefab.Length);
+            
+            Instantiate(powerUpPrefab[randomIndex], transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
     

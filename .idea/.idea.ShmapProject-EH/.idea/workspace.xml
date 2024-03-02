@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="847328d3-f1ee-451d-ba43-f91a350601e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Boss/WallPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Boss/WallPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/EnemyBullet 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/EnemyBullet 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/EnemyBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/EnemyBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/MultiBullet1/EnemyBullet 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/MultiBullet1/EnemyBullet 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/MultiBullet1/EnemyBullet 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Enemy bullet/MultiBullet1/EnemyBullet 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/AbilityPowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/PowerUp/AbilityPowerUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/HpPowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/PowerUp/HpPowerUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PowerUp/ShootPowerUp (3).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/PowerUp/ShootPowerUp (3).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/GingerFighter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/GingerFighter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/PurpleSaw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/PurpleSaw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/ScorpionEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/ScorpionEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/TurretAimed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/TurretAimed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/SpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/SpawnerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/Ui Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/Ui Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +35,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/FreezeRotation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossWall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Exploding bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/CustomTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/SpawnerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PowerUpScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/Menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/Ui Manager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -110,7 +133,7 @@
       <workItem from="1709228539059" duration="9328000" />
       <workItem from="1709313600158" duration="3747000" />
       <workItem from="1709329147961" duration="4878000" />
-      <workItem from="1709376382332" duration="1172000" />
+      <workItem from="1709376382332" duration="16940000" />
     </task>
     <servers />
   </component>

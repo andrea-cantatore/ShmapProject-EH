@@ -80,14 +80,11 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.K) && _bombCounter>0)
             {
-                GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
-                foreach (GameObject obj in allObjects)
-                {
-                    if (obj.layer == 19)
-                    {
-                        GameObject.Destroy(obj);
-                    }
-                }
+                
+                GameObject[] Bullets = GameObject.FindGameObjectsWithTag("Bullet");
+                
+                foreach (GameObject EnemyBullet in Bullets)
+                    GameObject.Destroy(EnemyBullet);
 
                 _bombCounter--;
                 EventManager.OnBomb?.Invoke(false);
@@ -191,6 +188,25 @@ public class PlayerController : MonoBehaviour
             {
                 _powerUpLevel++;
                 other.gameObject.SetActive(false); 
+                Destroy(other);
+            }
+        }
+        else if(other.gameObject.layer == 9)
+        {
+            if (_playerHP < 5)
+            {
+                _playerHP++;
+                EventManager.OnPlayerHp?.Invoke(true);
+                Destroy(other);
+            }
+        }
+        else if(other.gameObject.layer == 10)
+        {
+            if (_bombCounter < 5)
+            {
+                _bombCounter++;
+                EventManager.OnBomb?.Invoke(true);
+                Destroy(other);
             }
         }
         else

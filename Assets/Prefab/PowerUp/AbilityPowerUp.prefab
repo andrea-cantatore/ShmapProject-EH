@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 758f6c6eeb9d9f6449bd4f834e6ce61f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7778203626637991504}
   - component: {fileID: 1398257550339264458}
+  - component: {fileID: 1514609326521350555}
   m_Layer: 10
   m_Name: AbilityPowerUp
   m_TagString: Untagged
@@ -152,3 +153,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.27313963
+--- !u!114 &1514609326521350555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949024074894512140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a7bf451f49604ca3f6602a9fc4ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxX: 18
+  _movementSpeed: 4

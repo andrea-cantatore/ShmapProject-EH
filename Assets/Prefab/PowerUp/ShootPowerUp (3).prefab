@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8934830546507822189}
   - component: {fileID: 7769980300162152510}
+  - component: {fileID: 5704336712644692919}
   m_Layer: 8
   m_Name: ShootPowerUp (3)
   m_TagString: Untagged
@@ -68,6 +69,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.27313963
+--- !u!114 &5704336712644692919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886460644685382963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a7bf451f49604ca3f6602a9fc4ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxX: 18
+  _movementSpeed: 4
 --- !u!1 &8802528833890977122
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +155,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: f67292ad9d4e9bf429e8f5c1058053cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

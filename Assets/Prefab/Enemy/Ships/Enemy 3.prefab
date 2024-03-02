@@ -55,6 +55,11 @@ MonoBehaviour:
   _fireDelay: 4
   _shootPoint: {fileID: 1559594161692466033}
   _bulletPrefab: {fileID: 6541644379796165062, guid: 9c3eb79328f77dd43a5187cedbbcf324, type: 3}
+  _scoreValue: 30
+  powerUpPrefab:
+  - {fileID: 7949024074894512140, guid: 6901f50cf157367418f71bfb08b8dd4b, type: 3}
+  - {fileID: 3911163563030698193, guid: fb06ed357afa3da4fba215107f1a0001, type: 3}
+  - {fileID: 7886460644685382963, guid: 8822dda22573837488d79ff9c04487dd, type: 3}
 --- !u!50 &1152379284242454726
 Rigidbody2D:
   serializedVersion: 4

@@ -51,11 +51,11 @@ public class UiManager : MonoBehaviour
     {
         if (isDmg = true)
         {
-            _hpSprites[currentBomb].SetActive(false);
+            _hpSprites[currentHp].SetActive(false);
         }
         else
         {
-            _hpSprites[currentBomb+1].SetActive(true);
+            _hpSprites[currentHp+1].SetActive(true);
         }
     }
     private void ScoreChanger(int quantity)
