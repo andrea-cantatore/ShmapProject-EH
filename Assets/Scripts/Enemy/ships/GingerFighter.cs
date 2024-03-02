@@ -19,6 +19,14 @@ public class GingerFighter : MonoBehaviour
     private PlayerController playerController;
     [SerializeField] private int _scoreValue;
     
+    private void OnEnable()
+    {
+        EventManager.OnObjectScoreReached += DestroyMe;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnObjectScoreReached -= DestroyMe;
+    }
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerController>();
@@ -51,12 +59,12 @@ public class GingerFighter : MonoBehaviour
         
         if (_hp <= 0)
         {
-            Destroy(gameObject);
+            DestroyMe();
             EventManager.OnScoreUp?.Invoke(_scoreValue);
         }
         if (transform.position.x < -_maxX - 2)
         {  
-            Destroy(gameObject);
+            DestroyMe();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -88,6 +96,10 @@ public class GingerFighter : MonoBehaviour
     {
         GameObject bullet = Instantiate(_bulletPrefab, _shootPoint.position,_shootPoint.rotation);
         
+    }
+    private void DestroyMe()
+    {
+        Destroy(gameObject);
     }
     
     

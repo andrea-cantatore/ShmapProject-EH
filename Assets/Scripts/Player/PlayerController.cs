@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
                 }
 
                 _bombCounter--;
-                EventManager.OnBombUse?.Invoke();
+                EventManager.OnBomb?.Invoke(false);
             }
             
         }
@@ -196,7 +196,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _playerHP--;
-            EventManager.OnPlayerGotDmg?.Invoke();
+            EventManager.OnPlayerHp?.Invoke(false);
         }
     }
 

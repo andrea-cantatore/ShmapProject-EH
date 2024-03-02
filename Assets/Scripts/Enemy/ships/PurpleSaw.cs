@@ -16,6 +16,14 @@ public class PurpleSaw : MonoBehaviour
     private PlayerController playerController;
     [SerializeField] private int _scoreValue;
 
+    private void OnEnable()
+    {
+        EventManager.OnObjectScoreReached += DestroyMe;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnObjectScoreReached -= DestroyMe;
+    }
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
@@ -43,12 +51,12 @@ public class PurpleSaw : MonoBehaviour
         }
         if (_hp <= 0)
         {
-            Destroy(gameObject);
+            DestroyMe();
             EventManager.OnScoreUp?.Invoke(_scoreValue);
         }
         if (transform.position.x < -_maxX - 3)
         {
-            Destroy(gameObject);
+            DestroyMe();
         }
         Rotate();
     }
@@ -76,5 +84,9 @@ public class PurpleSaw : MonoBehaviour
         {
             return playerController.transform.position;
         }
+    }
+    private void DestroyMe()
+    {
+        Destroy(gameObject);
     }
 }

@@ -17,7 +17,15 @@ public class TurretAimed : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     private PlayerController playerController;
     [SerializeField] private int _scoreValue;
-    
+
+    private void OnEnable()
+    {
+        EventManager.OnObjectScoreReached += DestroyMe;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnObjectScoreReached -= DestroyMe;
+    }
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerController>();
@@ -46,12 +54,12 @@ public class TurretAimed : MonoBehaviour
         
         if (_hp <= 0)
         {
-            Destroy(gameObject);
+            DestroyMe();
             EventManager.OnScoreUp?.Invoke(_scoreValue);
         }
         if (transform.position.x < -_maxX - 3)
         {  
-            Destroy(gameObject);
+            DestroyMe();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,6 +79,11 @@ public class TurretAimed : MonoBehaviour
     private void Shoot()
     {
         GameObject bullet = Instantiate(_bulletPrefab, _shootPoint.position,_shootPoint.rotation);
+    }
+
+    private void DestroyMe()
+    {
+        Destroy(gameObject);
     }
     
 }
