@@ -83,6 +83,7 @@ public class BossController : MonoBehaviour
         if (_phase > 3)
         {
             Destroy(gameObject);
+            EventManager.OnBossDeath?.Invoke();
         }
         else
         {

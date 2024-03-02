@@ -18,7 +18,7 @@ public class ScorpionEnemy : MonoBehaviour
     private int _bulletToShoot = 3;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private GameObject _bulletPrefab;
-    
+    [SerializeField] private int _scoreValue;
     
     private void Start()
     {
@@ -58,6 +58,7 @@ public class ScorpionEnemy : MonoBehaviour
         if (_hp <= 0)
         {
             Destroy(gameObject);
+            EventManager.OnScoreUp?.Invoke(_scoreValue);
         }
         if (transform.position.x < -_maxX - 2)
         {  

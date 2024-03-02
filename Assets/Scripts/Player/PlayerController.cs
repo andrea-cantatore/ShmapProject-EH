@@ -33,8 +33,7 @@ public class PlayerController : MonoBehaviour
     private float _fireElapseTime;
     private Transform _shootPoint1, _shootPoint2, _shootPoint3, _shootPoint4, _shootPoint5;
     private int _powerUpLevel = 1;
-
-    private int _bombCounter;
+    [SerializeField] private int _bombCounter;
     
     private void Awake()
     {
@@ -57,6 +56,7 @@ public class PlayerController : MonoBehaviour
         if (_playerHP <= 0)
         {
             _isPlayerAlive = false;
+            EventManager.OnPlayerDeath?.Invoke();
         }
         if (_isPlayerAlive)
         {
@@ -72,11 +72,25 @@ public class PlayerController : MonoBehaviour
                 _hitbox.SetActive(false);
                 _movementSpeed = _speedRange.y;
             }
-            if (Input.GetKey(KeyCode.K) && !_timer.TimerUpdate())
+            if (Input.GetKey(KeyCode.J) && !_timer.TimerUpdate())
             {
                 Shoot();
                 _timer.Reset();
                 _timer.Start();
+            }
+            if (Input.GetKeyDown(KeyCode.K) && _bombCounter>0)
+            {
+                GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+                foreach (GameObject obj in allObjects)
+                {
+                    if (obj.layer == 19)
+                    {
+                        GameObject.Destroy(obj);
+                    }
+                }
+
+                _bombCounter--;
+                EventManager.OnBombUse?.Invoke();
             }
             
         }
@@ -150,7 +164,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (IsPlayerAbleToMove())
+        if (IsPlayerAbleToMove() && _isPlayerAlive)
         {
             Vector2 movement = _movementDirections.normalized * (_movementSpeed * Time.fixedDeltaTime);
             _rb.MovePosition(_rb.position + movement);
@@ -182,6 +196,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _playerHP--;
+            EventManager.OnPlayerGotDmg?.Invoke();
         }
     }
 

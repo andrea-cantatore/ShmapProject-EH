@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702923505955662062}
   - component: {fileID: 8444660952402652270}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: M484BulletCollection1-removebg-preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7881635314142244416}
   - component: {fileID: -315116390199543485}
   - component: {fileID: -4435949765164855909}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: EnemyBullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

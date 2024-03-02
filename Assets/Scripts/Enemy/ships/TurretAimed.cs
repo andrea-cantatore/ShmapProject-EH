@@ -16,6 +16,7 @@ public class TurretAimed : MonoBehaviour
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private GameObject _bulletPrefab;
     private PlayerController playerController;
+    [SerializeField] private int _scoreValue;
     
     private void Awake()
     {
@@ -46,6 +47,7 @@ public class TurretAimed : MonoBehaviour
         if (_hp <= 0)
         {
             Destroy(gameObject);
+            EventManager.OnScoreUp?.Invoke(_scoreValue);
         }
         if (transform.position.x < -_maxX - 3)
         {  

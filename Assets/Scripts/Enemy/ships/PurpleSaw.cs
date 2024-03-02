@@ -14,6 +14,7 @@ public class PurpleSaw : MonoBehaviour
     private float _moveElapsedTime,_moveElapsedTimeNotResetting;
     private float m_timer;
     private PlayerController playerController;
+    [SerializeField] private int _scoreValue;
 
     void Start()
     {
@@ -40,7 +41,12 @@ public class PurpleSaw : MonoBehaviour
             _targetPos = TargPosSetter(false);
             _moveElapsedTime = 0;
         }
-        if (_hp <= 0 || transform.position.x < -_maxX - 3)
+        if (_hp <= 0)
+        {
+            Destroy(gameObject);
+            EventManager.OnScoreUp?.Invoke(_scoreValue);
+        }
+        if (transform.position.x < -_maxX - 3)
         {
             Destroy(gameObject);
         }

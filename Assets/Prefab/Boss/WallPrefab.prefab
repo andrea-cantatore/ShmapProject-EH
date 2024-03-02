@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4699812093196796636}
   - component: {fileID: 2217436449216468618}
   - component: {fileID: 2635266102406691789}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: WallPrefab
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 483342819154260690}
   - component: {fileID: 7270636460071712318}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: pngtree-golden-neon-laser-beam-png-image_6067437-removebg-preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}

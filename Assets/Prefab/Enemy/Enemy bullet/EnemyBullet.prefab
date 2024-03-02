@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3757483826957239819}
   - component: {fileID: 2657839118017537163}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: bullets_mini_sheet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7881635314142244416}
   - component: {fileID: 3924688394530286}
   - component: {fileID: -4435949765164855909}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
