@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="847328d3-f1ee-451d-ba43-f91a350601e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/Ships/Enemy 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/TurretAimed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ships/TurretAimed.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,8 @@
       <workItem from="1709228180815" duration="117000" />
       <workItem from="1709228539059" duration="9328000" />
       <workItem from="1709313600158" duration="3747000" />
-      <workItem from="1709329147961" duration="4285000" />
+      <workItem from="1709329147961" duration="4878000" />
+      <workItem from="1709376382332" duration="1172000" />
     </task>
     <servers />
   </component>

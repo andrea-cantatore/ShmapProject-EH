@@ -62,12 +62,12 @@ public class PlayerController : MonoBehaviour
         {
             _movementDirections.x = Input.GetAxisRaw("Horizontal");
             _movementDirections.y = Input.GetAxisRaw("Vertical");
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.L))
             {
                 _hitbox.SetActive(true);
                 _movementSpeed = _speedRange.x;
             }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.L))
             {
                 _hitbox.SetActive(false);
                 _movementSpeed = _speedRange.y;
