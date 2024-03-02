@@ -65,7 +65,10 @@ public class PurpleSaw : MonoBehaviour
     {
         if (collision.gameObject.layer == 12)
         {
-            _hp -= 1;
+            if (transform.position.x < _maxX)
+            {
+                _hp -= 1;
+            }
         }
     }
 
@@ -88,7 +91,7 @@ public class PurpleSaw : MonoBehaviour
     }
     private void DestroyMe()
     {
-        if (Random.Range(0f, 1f) <= 0.2f)
+        if (Random.Range(0f, 1f) <= 0.5f)
         {
             int randomIndex = Random.Range(0, powerUpPrefab.Length);
             

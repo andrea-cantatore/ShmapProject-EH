@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
                     GameObject.Destroy(EnemyBullet);
 
                 _bombCounter--;
-                EventManager.OnBomb?.Invoke(false);
+                EventManager.OnBomb?.Invoke(true);
             }
             
         }
@@ -187,8 +187,7 @@ public class PlayerController : MonoBehaviour
             if(_powerUpLevel < 5)
             {
                 _powerUpLevel++;
-                other.gameObject.SetActive(false); 
-                Destroy(other);
+                other.gameObject.SetActive(false);
             }
         }
         else if(other.gameObject.layer == 9)
@@ -196,8 +195,8 @@ public class PlayerController : MonoBehaviour
             if (_playerHP < 5)
             {
                 _playerHP++;
-                EventManager.OnPlayerHp?.Invoke(true);
-                Destroy(other);
+                EventManager.OnPlayerHp?.Invoke(false);
+                other.gameObject.SetActive(false);
             }
         }
         else if(other.gameObject.layer == 10)
@@ -205,14 +204,14 @@ public class PlayerController : MonoBehaviour
             if (_bombCounter < 5)
             {
                 _bombCounter++;
-                EventManager.OnBomb?.Invoke(true);
-                Destroy(other);
+                EventManager.OnBomb?.Invoke(false);
+                other.gameObject.SetActive(false);
             }
         }
         else
         {
             _playerHP--;
-            EventManager.OnPlayerHp?.Invoke(false);
+            EventManager.OnPlayerHp?.Invoke(true);
         }
     }
 

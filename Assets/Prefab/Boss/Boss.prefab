@@ -48,13 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3097d0598b8b6f7439e5dcd13464ffb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 100
+  _maxHP: 1000
   _bulletPrefab: {fileID: 6541644379796165062, guid: 491ab264080dd8e43af3e1cac7549983, type: 3}
   _wallPrefab: {fileID: 4472325424530620527, guid: 7dd6acf8c2c30e644ad1497480feab4f, type: 3}
   _fireDelay: 0.4
   _wallDelay: 0.6
   _shotPoint: {fileID: 1559594161692466033}
   _maxY: 10
+  _maxX: 18
 --- !u!50 &1152379284242454726
 Rigidbody2D:
   serializedVersion: 4

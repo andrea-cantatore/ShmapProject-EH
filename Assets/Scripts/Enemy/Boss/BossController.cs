@@ -13,10 +13,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private float _fireDelay, _wallDelay;
     [SerializeField] private Transform _shotPoint;
     private float _timer, _timer2;
-    [SerializeField] private float _maxY;
-    private int _wallCount = 10;
-    private float _spawnInterval = 2f;
-    private float _timerSpawn;
+    [SerializeField] private float _maxY, _maxX;
 
     void Awake()
     {
@@ -26,7 +23,9 @@ public class BossController : MonoBehaviour
     void Start()
     {
         _currentHP = _maxHP;
-        _timerSpawn = _spawnInterval;
+        
+        Vector3.MoveTowards(transform.position, new Vector3(_maxX - 2,transform.position.y,transform.position.z), 20 * Time.deltaTime);
+        transform.up = Vector2.left;
     }
 
     void Update()
@@ -87,7 +86,7 @@ public class BossController : MonoBehaviour
         }
         else
         {
-            _currentHP = _maxHP;
+            _currentHP = _maxHP*2;
         }
     }
 
@@ -139,12 +138,12 @@ public class BossController : MonoBehaviour
             {
                 Instantiate(_wallPrefab, currentPosition, Quaternion.identity);
             }
-
-            yPos += length + Random.Range(1f, 3f) * step;
+            
 
             
         }
     }
+    
 
     
 }

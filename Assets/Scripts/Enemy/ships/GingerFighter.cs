@@ -72,7 +72,10 @@ public class GingerFighter : MonoBehaviour
     {
         if (collision.gameObject.layer == 12)
         {
-            _hp -= 1;
+            if (transform.position.x < _maxX)
+            {
+                _hp -= 1;
+            }
         }
     }
     private Vector3 TargPosSetter(bool isGoingAway)
