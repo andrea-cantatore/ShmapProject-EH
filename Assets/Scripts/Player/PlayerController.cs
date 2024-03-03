@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
         {
             _isPlayerAlive = false;
             EventManager.OnPlayerDeath?.Invoke();
+            gameObject.SetActive(true);
         }
         if (_isPlayerAlive)
         {
@@ -153,7 +154,6 @@ public class PlayerController : MonoBehaviour
                 bullet14.SetActive(true);
                 break;
             default:
-                Debug.Log("seiScemo");
                 break;
         }
 

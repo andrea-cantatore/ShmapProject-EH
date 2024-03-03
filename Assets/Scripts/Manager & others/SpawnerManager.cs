@@ -63,13 +63,13 @@ public class SpawnerManager : MonoBehaviour
         _score += quantity;
         if (_score > _difficultySetter1)
         {
-            _spawnInterval -= 0.2f;
+            _spawnInterval -= 0.15f;
             _difficultySetter1 += 400;
         }
         if (_score > _difficultySetter2 )
         {
             _spawnQuantity++;
-            _difficultySetter2 += 1000;
+            _difficultySetter2 += 1500;
         }
         
     }

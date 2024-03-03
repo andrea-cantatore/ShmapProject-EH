@@ -77,7 +77,6 @@ public class BossController : MonoBehaviour
         if (_phase == 3)
         {
             _fireDelay += _fireDelay;
-            _wallDelay += _wallDelay;
         }
         if (_phase > 3)
         {
