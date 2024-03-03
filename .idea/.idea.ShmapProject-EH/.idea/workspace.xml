@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="847328d3-f1ee-451d-ba43-f91a350601e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShmapProject-EH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/SpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager &amp; others/SpawnerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +126,7 @@
       <workItem from="1709399706564" duration="5717000" />
       <workItem from="1709414574078" duration="635000" />
       <workItem from="1709477392087" duration="209000" />
+      <workItem from="1709502775084" duration="631000" />
     </task>
     <servers />
   </component>
